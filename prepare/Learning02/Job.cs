@@ -10,7 +10,9 @@ using System;
 
         // A special method, called a constructor that is invoked using the  
         // new keyword followed by the class name and parentheses.
-        
+        public Job()
+        {
+        }
         //Displays the job information in the format "Job Title (Company) StartYear-EndYear",
         //for example: "Software Engineer (Microsoft) 2019-2022".
         public void Display()
