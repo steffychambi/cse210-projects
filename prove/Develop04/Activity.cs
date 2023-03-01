@@ -42,6 +42,10 @@
             Thread.Sleep(100);
             Console.Write("\b \b");
             index++;
+            if (index >= animationStrings.Count)
+            {
+                index = 0;
+            }
         }
         }
 
