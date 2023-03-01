@@ -4,8 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to mindfulness program");
-        Console.WriteLine();
+        Console.Clear();
 
         List<string> options = new List<string>()
                     {
@@ -17,6 +16,9 @@ class Program
     
         string number = "0";
 
+        Console.WriteLine("Welcome to Mindfulness Program");
+        Console.WriteLine();
+
         do
         {
             Console.WriteLine("Choose an option:");
@@ -26,12 +28,29 @@ class Program
             {
                 Console.WriteLine(option); 
             }
-            number = Console.ReadLine();
-
+            number = Console.ReadLine();    
+            Console.Clear();
+            
+            
 
             if (number == "1") 
             {
-                
+                // BreatheActivity BreathingActivity = new BreatheActivity();
+                // BreathingActivity.StartRunning();
+                // BreathingActivity.ShowSpinner(5);
+
+                // Console.WriteLine("How long, in seconds, would you like to perform this activity?");
+                // int duration = int.Parse(Console.ReadLine());
+
+                // DateTime startTime = DateTime.Now;
+                // DateTime endTime = startTime.AddSeconds(duration);
+
+                // while (DateTime.Now >= endTime)
+                // {
+                //     BreathingActivity.DisplayMessage();
+                // }
+
+
             }
             else if (number == "2") 
             {
