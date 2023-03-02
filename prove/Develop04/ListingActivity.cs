@@ -1,8 +1,5 @@
  public class ListingActivity : Activity
     {
-        private List<string> _reflectionQuestions;
-        private string _question;
-        
 
         public ListingActivity()
         {
