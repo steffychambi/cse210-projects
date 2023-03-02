@@ -29,28 +29,17 @@ class Program
                 Console.WriteLine(option); 
             }
             number = Console.ReadLine();    
+            
             Console.Clear();
             
             
 
             if (number == "1") 
             {
-                // BreatheActivity BreathingActivity = new BreatheActivity();
-                // BreathingActivity.StartRunning();
-                // BreathingActivity.ShowSpinner(5);
-
-                // Console.WriteLine("How long, in seconds, would you like to perform this activity?");
-                // int duration = int.Parse(Console.ReadLine());
-
-                // DateTime startTime = DateTime.Now;
-                // DateTime endTime = startTime.AddSeconds(duration);
-
-                // while (DateTime.Now >= endTime)
-                // {
-                //     BreathingActivity.DisplayMessage();
-                // }
-
-
+                BreatheActivity BreathingActivity = new BreatheActivity();
+                BreathingActivity.StartRunning();
+                BreathingActivity.DisplayMessage();
+                BreathingActivity.DisplayOutroMessage();
             }
             else if (number == "2") 
             {
@@ -67,6 +56,7 @@ class Program
                     Console.WriteLine("That option does not exist.");
                 }
             }
+        Console.Clear();
         }
         while (number != "4"); 
         Console.WriteLine("Goodbye!");

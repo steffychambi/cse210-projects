@@ -11,7 +11,7 @@
                     {
                     "Breathe in...",
                     "Hold for...",
-                    "Breathe in...",
+                    "Breathe out...",
                     "Hold for...", 
                     };
         private string _message;
@@ -33,20 +33,37 @@
         //     _explanation = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
         //     return _explanation;
         // }
-        public int GetDuration(int duration)
-        {
-            _duration = duration;
-            return _duration;
-        }
-        public string GetMessage(int index)
-        {
-            _message = _messages[index];
-            return _message;
-        }
+        // public string GetMessage(int index)
+        // {
+        //     _message = _messages[index];
+        //     return _message;
+        // }
         
         public void DisplayMessage()
         {
-            Console.WriteLine(_message);
+            
+
+            DateTime startTime = DateTime.Now;
+            DateTime endTime = startTime.AddSeconds(_duration);
+            
+            int index = 0;
+
+            while (DateTime.Now <= endTime)
+            {
+
+                _message = _messages[index];
+                Console.Write(_message);
+                Thread.Sleep(1000);
+                ShowCountDown();
+                Console.WriteLine();
+                index++;
+                if (index >= _messages.Count)
+                {
+                    Console.WriteLine();
+                    index = 0;
+                }
+
+            }
         }
         public void ShowCountDown()
         {
@@ -57,7 +74,7 @@
             {
                 string s = _numbers [index];
                 Console.Write(s);
-                Thread.Sleep(100);
+                Thread.Sleep(1000);
                 Console.Write("\b \b");
                 index++;
             }
