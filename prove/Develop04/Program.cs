@@ -36,24 +36,24 @@ class Program
 
             if (number == "1") 
             {
-                BreatheActivity breathingActivity = new BreatheActivity();
-                breathingActivity.StartRunning();
-                breathingActivity.DisplayMessage();
-                breathingActivity.DisplayOutroMessage();
+                BreatheActivity BreathingActivity = new BreatheActivity();
+                BreathingActivity.StartRunning();
+                BreathingActivity.DisplayMessage();
+                BreathingActivity.DisplayOutroMessage();
             }
             else if (number == "2") 
             {
-                ReflectionActivity reflectionActivity = new ReflectionActivity();
-                reflectionActivity.StartRunning();
-                reflectionActivity.RunActivity();
-                reflectionActivity.DisplayOutroMessage();
+                ReflectionActivity ReflectionActivity = new ReflectionActivity();
+                ReflectionActivity.StartRunning();
+                ReflectionActivity.RunActivity();
+                ReflectionActivity.DisplayOutroMessage();
             }
             else if (number == "3")  
             {
-                ListingActivity listingActivity = new ListingActivity();
-                listingActivity.StartRunning();
-                listingActivity.RunActivity();
-                listingActivity.DisplayOutroMessage();
+                ListingActivity ListingActivity = new ListingActivity();
+                ListingActivity.StartRunning();
+                ListingActivity.RunActivity();
+                ListingActivity.DisplayOutroMessage();
             }
             else 
             {
