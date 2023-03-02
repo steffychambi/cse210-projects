@@ -50,7 +50,10 @@ class Program
             }
             else if (number == "3")  
             {
-               
+                ListingActivity listingActivity = new ListingActivity();
+                listingActivity.StartRunning();
+                listingActivity.RunActivity();
+                listingActivity.DisplayOutroMessage();
             }
             else 
             {

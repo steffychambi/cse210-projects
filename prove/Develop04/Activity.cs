@@ -5,6 +5,8 @@ public class Activity
         protected int _duration;
         protected string _outroMessage;
         private List<string> animationStrings;
+        protected List<string> _prompts;
+        private string _prompt;
         
 
         public Activity()
@@ -77,6 +79,23 @@ public class Activity
             Console.Clear();
             Console.WriteLine("Get Ready...");
             ShowSpinner(5);
+        }
+
+        public void GetRandomPrompt()
+        {
+            Random randomGenerator = new Random();
+            int i = randomGenerator.Next(0,3);
+            _prompt = _prompts[i];
+
+            
+        }
+        public void DisplayPrompt()
+        {
+            GetRandomPrompt();
+            Console.WriteLine("Consider the following prompt:");
+            Console.WriteLine();
+            Console.WriteLine($"---- {_prompt} ----");
+            Console.WriteLine();
         }
 
         public void DisplayOutroMessage()
