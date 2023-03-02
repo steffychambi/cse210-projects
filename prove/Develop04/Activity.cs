@@ -3,7 +3,7 @@ public class Activity
         protected string _name;
         protected string _explanation;
         protected int _duration;
-        protected string _outroMessage;
+        private string _outroMessage;
         private List<string> animationStrings;
         protected List<string> _prompts;
         private string _prompt;
