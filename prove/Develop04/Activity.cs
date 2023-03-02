@@ -51,7 +51,21 @@ public class Activity
                     index = 0;
                 }
             }
+            Console.WriteLine();
         }
+
+        public void ShowCountDown(int number)
+        {
+
+            while (number > 0)
+            {
+                Console.Write(number);
+                Thread.Sleep(1000);
+                Console.Write("\b \b");
+                number = number - 1;
+            }
+        }
+
         public void StartRunning()
         {
             DisplayName();
@@ -70,7 +84,7 @@ public class Activity
             Console.WriteLine();
             Console.WriteLine(_outroMessage);
             Console.WriteLine();
-            Console.WriteLine($"You have completed another {_duration} of the {_name}.");
+            Console.WriteLine($"You have completed another {_duration} seconds of the {_name}.");
             ShowSpinner(5);
         }
     }

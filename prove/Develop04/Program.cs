@@ -36,14 +36,17 @@ class Program
 
             if (number == "1") 
             {
-                BreatheActivity BreathingActivity = new BreatheActivity();
-                BreathingActivity.StartRunning();
-                BreathingActivity.DisplayMessage();
-                BreathingActivity.DisplayOutroMessage();
+                BreatheActivity breathingActivity = new BreatheActivity();
+                breathingActivity.StartRunning();
+                breathingActivity.DisplayMessage();
+                breathingActivity.DisplayOutroMessage();
             }
             else if (number == "2") 
             {
-              
+                ReflectionActivity reflectionActivity = new ReflectionActivity();
+                reflectionActivity.StartRunning();
+                reflectionActivity.RunActivity();
+                reflectionActivity.DisplayOutroMessage();
             }
             else if (number == "3")  
             {
