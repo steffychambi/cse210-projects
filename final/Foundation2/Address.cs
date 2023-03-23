@@ -13,7 +13,7 @@ public class Address
         _country = country;
     }
 
-    public bool LiveInUsa()
+    public bool IsInUsa()
     {
         if(_country == "United States")
         {
