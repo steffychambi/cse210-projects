@@ -13,6 +13,16 @@ public class Product
         _quantity = quantity;
     }
 
+    public string GetName()
+    {
+        return _productName;
+    }
+
+    public int GetId()
+    {
+        return _productId;
+    }
+
     public double GetPrice()
     {
         return _pricePerUnit*_quantity;

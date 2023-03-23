@@ -9,6 +9,16 @@ public class Costumer
         _address = address;
     }
 
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public string GetAddress()
+    {
+        return _address.ReturnAddress();
+    }
+
     public bool LiveInUsa()
     {
         return _address.IsInUsa();
