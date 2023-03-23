@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         //Creates the first video
-        Video video1 = new Video("how to improve your way of studying","Polo Guerrero",1050);
+        Video video1 = new Video("How to improve your way of studying","Polo Guerrero",1050);
         
         //Creating comments for the first video:
         //Comment 1:
@@ -56,6 +56,24 @@ class Program
         string text9 = "I think apart from communication these rules can also be applied to our daily life to make it more easier and simpler";
         Comment comment9 = new Comment("Ismail Shareef Mohammed", text9);
 
-        
+        //Adding comments to a list inside of the third video
+        video3.AddComment(comment7);
+        video3.AddComment(comment8);
+        video3.AddComment(comment9);
+
+        //Creating the list of Videos
+        List<Video> videos = new List<Video>();
+
+        //Adding videos to the list
+        videos.Add(video1);
+        videos.Add(video2);
+        videos.Add(video3);
+
+        //Iterating through the list of videos to display their information
+        foreach (Video i in videos)
+        {
+            i.DisplayAll();
+            Console.WriteLine();
+        }
     }
 }

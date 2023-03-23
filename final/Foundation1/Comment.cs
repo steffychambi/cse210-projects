@@ -11,7 +11,7 @@ public class Comment
     }
     public string GetComment()
     {
-        string comment ="name:" + _name + " - " + "text:" + _text; 
+        string comment ="name: " + _name + " - " + "text: " + _text; 
         return comment; 
     }
 }

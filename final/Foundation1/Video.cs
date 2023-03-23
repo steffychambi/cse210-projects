@@ -3,7 +3,7 @@ public class Video
     private string _title;
     private string _author;
     private int _length;
-    private List<Comment> _comments;
+    private List<Comment> _comments = new List<Comment>();
 
 
     public Video(string title, string author, int length)
@@ -24,11 +24,14 @@ public class Video
     {
         Console.WriteLine($"Title: {_title}");
         Console.WriteLine($"Author: {_author}");
-        Console.WriteLine($"Length: {_length}");
+        Console.WriteLine($"Length in seconds: {_length.ToString()}");
+        Console.WriteLine($"Number of comments: {ReturnNumComments().ToString()}");
         Console.WriteLine("Comments:");
 
         foreach (Comment i in _comments)
+        {
             Console.WriteLine(i.GetComment());
+        }
 
     }
 }
