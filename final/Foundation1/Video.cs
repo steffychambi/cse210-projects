@@ -16,4 +16,19 @@ public class Video
     {
         _comments.Add(comment);
     }
+    public int ReturnNumComments()
+    {
+        return _comments.Count;
+    } 
+    public void DisplayAll()
+    {
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Author: {_author}");
+        Console.WriteLine($"Length: {_length}");
+        Console.WriteLine("Comments:");
+
+        foreach (Comment i in _comments)
+            Console.WriteLine(i.GetComment());
+
+    }
 }
