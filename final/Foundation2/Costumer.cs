@@ -3,7 +3,7 @@ public class Costumer
     private string _name;
     private Address _address;
 
-    Costumer(string name, Address address)
+    public Costumer(string name, Address address)
     {
         _name = name;
         _address = address;

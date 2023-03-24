@@ -6,7 +6,14 @@ class Program
     {
         //Creates the first Order
         Order order1 = new Order();
-        
+
+        //Creating a costumer and its address
+        Address address1 = new Address("Main Street", "Orlando", "Florida", "United States");
+        Costumer costumer1 = new Costumer("Polly Jones", address1);
+
+        //Setting the variable costumer of the first order
+        order1.SetCostumer(costumer1);
+
         //Creating products for the first order:
         //Product 1:
         Product product1 = new Product("Headphones", 101, 8.99, 1);
@@ -22,6 +29,13 @@ class Program
 
         //Creates the second Order
         Order order2 = new Order();
+
+        //Creating a costumer and its address
+        Address address2 = new Address("Ave. Banzer", "Santa Cruz de la Sierra", "Santa Cruz", "Bolivia");
+        Costumer costumer2 = new Costumer("Maria Toledo", address2);
+
+        //Setting the variable costumer of the first order
+        order2.SetCostumer(costumer2);
         
         //Creating products for the second order:
         //Product 4:
