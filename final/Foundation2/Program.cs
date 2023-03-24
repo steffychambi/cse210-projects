@@ -35,5 +35,20 @@ class Program
         order2.AddProduct(product4);
         order2.AddProduct(product5);
         order2.AddProduct(product6);
+
+        //Calling the methods to get the packing label, the shipping label, 
+        //and the total price of the first order, and display them.
+        Console.WriteLine("Order One:");
+        Console.WriteLine($"Packing label: {order1.ReturnPackingLabel()}");
+        Console.WriteLine($"Shipping label: {order1.ReturnShippingLabel()}");
+        Console.WriteLine($"Total cost: {order1.GetTotalCost()}");
+
+        Console.WriteLine("");
+
+        //Second order.
+        Console.WriteLine("Order Two:");
+        Console.WriteLine($"Packing label: {order2.ReturnPackingLabel()}");
+        Console.WriteLine($"Shipping label: {order2.ReturnShippingLabel()}");
+        Console.WriteLine($"Total cost: {order2.GetTotalCost()}");
     }
 }
