@@ -14,6 +14,11 @@ public class Order
         _costumer = costumer;
     }
 
+    public string GetTotalCost()
+    {
+        return _totalCost.ToString();
+    }
+
     public void AddProduct(Product product)
     {
         _products.Add(product);
