@@ -47,20 +47,19 @@ public class Order
 
     public string ReturnPackingLabel()
     {
-        string inf = "";
+        string packingLabel = "";
         foreach(Product product in _products)
         {
-           inf = $"product name: {product.GetName()}, product Id: {product.GetId()}";
-           inf += "";
+           packingLabel += $"product name: {product.GetName()} - Id: {product.GetId()}\n";
         }
-        return inf;
+        return packingLabel;
     }
 
     public string ReturnShippingLabel()
     {
-        string inf = "";
-        inf = $"costumer name: {_costumer.GetName()}, costumer address: {_costumer.GetAddress()}";
-        inf += "";
-        return inf;
+        string shippingLabel = $"costumer name: {_costumer.GetName()}\n";
+        shippingLabel += "street // city // state // country\n";
+        shippingLabel += $"{_costumer.GetAddress()}.\n";
+        return shippingLabel;
     }
 }
