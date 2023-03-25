@@ -50,19 +50,32 @@ class Program
         order2.AddProduct(product5);
         order2.AddProduct(product6);
 
-        //Calling the methods to get the packing label, the shipping label, 
-        //and the total price of the first order, and display them.
-        Console.WriteLine("Order One:");
-        Console.WriteLine($"Packing label: {order1.ReturnPackingLabel()}");
-        Console.WriteLine($"Shipping label: {order1.ReturnShippingLabel()}");
-        Console.WriteLine($"Total cost: {order1.GetTotalCost()}");
+        Console.Clear();
+
+        //Calling the methods to get the packing label, the shipping label and displaying them. 
+        Console.WriteLine("Order One\n\r");
+        Console.WriteLine($"Packing label");
+        Console.WriteLine($"{order1.ReturnPackingLabel()}");
+        Console.WriteLine($"Shipping label");
+        Console.WriteLine($"{order1.ReturnShippingLabel()}");
+
+        //Calculating the total cost and displaying it.
+        order1.CalculateShippingCost();
+        order1.CalculateTotalCost();
+        Console.WriteLine($"Total cost: {order1.GetTotalCost()} $");
 
         Console.WriteLine("");
 
         //Second order.
-        Console.WriteLine("Order Two:");
-        Console.WriteLine($"Packing label: {order2.ReturnPackingLabel()}");
-        Console.WriteLine($"Shipping label: {order2.ReturnShippingLabel()}");
-        Console.WriteLine($"Total cost: {order2.GetTotalCost()}");
+        Console.WriteLine("Order Two\n\r");
+        Console.WriteLine($"Packing label");
+        Console.WriteLine($"{order2.ReturnPackingLabel()}");
+        Console.WriteLine($"Shipping label");
+        Console.WriteLine($"{order2.ReturnShippingLabel()}");
+
+        //Calculating the total cost and displaying it.
+        order2.CalculateShippingCost();
+        order2.CalculateTotalCost();
+        Console.WriteLine($"Total cost: {order2.GetTotalCost()} $");
     }
 }
