@@ -23,6 +23,10 @@ public class Address
         {
             return true;
         }
+        else if(_country == "United States of America")
+        {
+            return true;
+        }
         else 
         {
             return false;
@@ -31,7 +35,7 @@ public class Address
 
     public string ReturnAddress()
     {
-        string AddressString = $"street: {_street}, city: {_city}, state: {_state}, country: {_country}";
+        string AddressString = $"{_street}, {_city}, {_state}, {_country}";
         return AddressString;
     }
 }
