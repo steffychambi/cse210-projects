@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         //Lectures
 
         //Setting Variables for the Lecture event
@@ -22,13 +23,18 @@ class Program
         lectureEvent.SetSpeakerName("Ernesto Spinelli");
         
         //Displaying the three different types of messages
+        Console.WriteLine("First Event\n\r");
         lectureEvent.ShowShortDescription();
+        Console.WriteLine();
         lectureEvent.ShowStandardDetails();
+        Console.WriteLine();
         lectureEvent.ShowFullDetails();
+        Console.WriteLine();
 
         //Receptions
 
         //Setting Variables for the Reception event
+        Console.WriteLine("Second Event\n\r");
         string title2 = "Layla and Gabriel WEDDING RECEPTION";
         string date2 = "Sat, Apr 01, 2023";
         string time2 = "05:00 PM";
@@ -42,8 +48,11 @@ class Program
 
         //Displaying the three different types of messages
         receptionEvent.ShowShortDescription();
+        Console.WriteLine();
         receptionEvent.ShowStandardDetails();
+        Console.WriteLine();
         receptionEvent.ShowFullDetails();
+        Console.WriteLine();
 
         //Outdoor Gathering
 
@@ -60,10 +69,13 @@ class Program
         outdoorEvent.SetWeather("Sunny");
 
         //Displaying the three different types of messages
+        Console.WriteLine("Third Event\n\r");
         outdoorEvent.ShowShortDescription();
+        Console.WriteLine();
         outdoorEvent.ShowStandardDetails();
+        Console.WriteLine();
         outdoorEvent.ShowFullDetails();
-
-
+        Console.WriteLine();
+        
     }
 }

@@ -23,18 +23,18 @@ public class Event
     public void ShowStandardDetails()
     {
         Console.WriteLine($"'Standard Details'");
-        Console.WriteLine($"title: {_title}");
-        Console.WriteLine($"description: {_description}");
-        Console.WriteLine($"date: {_date}");
-        Console.WriteLine($"time: {_time}");
-        Console.WriteLine($"address: {_address.ReturnAddress()}");
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Description: {_description}");
+        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine($"Time: {_time}");
+        Console.WriteLine($"Address: {_address.ReturnAddress()}");
     }
 
     public void ShowShortDescription()
     {
         Console.WriteLine($"'Short Description'");
-        Console.WriteLine($"type of event: {_type}");
-        Console.WriteLine($"title: {_title}");
-        Console.WriteLine($"date: {_date}");
+        Console.WriteLine($"Type of event: {_type}");
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Date: {_date}");
     }
 }

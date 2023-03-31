@@ -26,14 +26,14 @@ public class LectureEvent : Event
     public void ShowFullDetails()
     {
         Console.WriteLine($"'Full Details'");
-        Console.WriteLine($"title: {_title}");
-        Console.WriteLine($"type: {_type}");
-        Console.WriteLine($"description: {_description}");
-        Console.WriteLine($"date: {_date}");
-        Console.WriteLine($"time: {_time}");
-        Console.WriteLine($"address: {_address.ReturnAddress()}");
+        Console.WriteLine($"Title: {_title}");
+        Console.WriteLine($"Type: {_type}");
+        Console.WriteLine($"Description: {_description}");
+        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine($"Time: {_time}");
+        Console.WriteLine($"Address: {_address.ReturnAddress()}");
         Console.WriteLine($"Speaker Name: {_speakerName}");
-        Console.WriteLine($"capacity: {_capacity} peolple");
+        Console.WriteLine($"Capacity: {_capacity} peolple");
     }
         
 }
