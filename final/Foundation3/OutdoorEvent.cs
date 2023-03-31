@@ -5,10 +5,6 @@ public class OutdoorEvent : Event
     public OutdoorEvent(string title, string date, string time, Address address): base (title, date, time, address)
     {
         _type = "Outdoor Gathering Event";
-        _title = title;
-        _date = date;
-        _time = time;
-        _address = address;
     }
 
     public void SetWeather(string weather)

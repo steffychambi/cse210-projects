@@ -6,10 +6,6 @@ public class LectureEvent : Event
     public LectureEvent(string title, string date, string time, Address address): base (title, date, time, address)
     {
         _type = "Lecture Event";
-        _title = title;
-        _date = date;
-        _time = time;
-        _address = address;
     }
 
     public void SetSpeakerName(string name)

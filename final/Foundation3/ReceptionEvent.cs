@@ -5,10 +5,6 @@ public class ReceptionEvent : Event
     public ReceptionEvent(string title, string date, string time, Address address): base (title, date, time, address)
     {
         _type = "Reception Event";
-        _title = title;
-        _date = date;
-        _time = time;
-        _address = address;
     }
 
     public void SetEmail(string email)
