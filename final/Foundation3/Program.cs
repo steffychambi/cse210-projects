@@ -10,11 +10,14 @@ class Program
         //Setting Variables for the Lecture event
         string title1 = "The Therapist as Human: An Existential Perspective";
         string date1 = "Fri, Mar 31, 2023";
-        string time1 = "10:30 AM -04";
+        string time1 = "10:30 AM";
         Address address1 = new Address("7470 Durgan Mountain Suite 569", "Krajcikhaven", "Montana", "USA");
         
         //Creating the Lecture Event 
         LectureEvent lectureEvent = new LectureEvent(title1, date1, time1, address1);
+
+        //Setting the Description
+        lectureEvent.SetDescription("This seminar will attempt to address a number of issues and concerns raised by and for therapists regarding the possibility of their own and their clients’ experience of their humanity while retaining an appropriate professional stance.");
 
         //Setting the Capacity
         lectureEvent.SetCapacity(30);
@@ -43,8 +46,11 @@ class Program
         //Creating the Reception Event 
         ReceptionEvent receptionEvent = new ReceptionEvent(title2, date2, time2, address2);
 
+        //Setting the Description
+        receptionEvent.SetDescription("Together with their families, Layla and Gabriel have chosen the first day of their new life together to be saturday, april 1rst, 2023 at {address2.ReturnAddress()}, you are invited to share in their joy as they exchange marriage vows, please kindly confirm your participation by March 30th.");
+        
         //Setting the RSVP email
-        receptionEvent.SetEmail($"Together with their families, Layla and Gabriel have chosen the first day of their new life together to be saturday, april 1rst, 2023 at {address2.ReturnAddress()}, you are invited to share in their joy as they exchange marriage vows, please kindly confirm your participation by March 30th.");
+        receptionEvent.SetEmail($"laylaandgabriel@gmail.com");
 
         //Displaying the three different types of messages
         receptionEvent.ShowShortDescription();
@@ -65,6 +71,9 @@ class Program
         //Creating the Outdoor Event 
         OutdoorEvent outdoorEvent = new OutdoorEvent(title3, date3, time3, address3);
 
+        //Setting the Description
+        receptionEvent.SetDescription("Sun's out! Time to get the grill out!");
+
         //Setting the weather
         outdoorEvent.SetWeather("Sunny");
 
@@ -76,6 +85,6 @@ class Program
         Console.WriteLine();
         outdoorEvent.ShowFullDetails();
         Console.WriteLine();
-        
+
     }
 }
