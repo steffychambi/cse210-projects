@@ -47,7 +47,7 @@ class Program
         ReceptionEvent receptionEvent = new ReceptionEvent(title2, date2, time2, address2);
 
         //Setting the Description
-        receptionEvent.SetDescription("Together with their families, Layla and Gabriel have chosen the first day of their new life together to be saturday, april 1rst, 2023 at {address2.ReturnAddress()}, you are invited to share in their joy as they exchange marriage vows, please kindly confirm your participation by March 30th.");
+        receptionEvent.SetDescription($"Together with their families, Layla and Gabriel have chosen the first day of their new life together to be saturday, april 1rst, 2023 at {address2.ReturnAddress()}, you are invited to share in their joy as they exchange marriage vows, please kindly confirm your participation by March 30th.");
         
         //Setting the RSVP email
         receptionEvent.SetEmail($"laylaandgabriel@gmail.com");
@@ -72,7 +72,7 @@ class Program
         OutdoorEvent outdoorEvent = new OutdoorEvent(title3, date3, time3, address3);
 
         //Setting the Description
-        receptionEvent.SetDescription("Sun's out! Time to get the grill out!");
+        outdoorEvent.SetDescription("Sun's out! Time to get the grill out!");
 
         //Setting the weather
         outdoorEvent.SetWeather("Sunny");
