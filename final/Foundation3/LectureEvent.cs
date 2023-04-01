@@ -29,7 +29,7 @@ public class LectureEvent : Event
         Console.WriteLine($"Time: {_time}");
         Console.WriteLine($"Address: {_address.ReturnAddress()}");
         Console.WriteLine($"Speaker Name: {_speakerName}");
-        Console.WriteLine($"Capacity: {_capacity} peolple");
+        Console.WriteLine($"Capacity: {_capacity} people");
     }
         
 }
