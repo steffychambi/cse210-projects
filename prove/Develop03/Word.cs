@@ -5,15 +5,18 @@ public class Word
 {
     //the text of the word
     private string _wordText;
+    //visibility of the word
     private bool _isVisible;
     private string _newWord;
     
-    // A  constructor
-    public Word(string wordText, bool isVisible)
+    public Word(string wordText)
     {
         _wordText = wordText;
-        //initial visibility of the word
-        _isVisible = isVisible;
+    }
+
+    public void SetVisibility(bool visible)
+    {
+        _isVisible = visible;
     }
 
     public void HideWord()
