@@ -12,15 +12,17 @@ public class Word
     public Word(string wordText)
     {
         _wordText = wordText;
+        _isVisible = true;
     }
 
-    public void SetVisibility(bool visible)
+    public bool GetIsHidden()
     {
-        _isVisible = visible;
+        return _isVisible;
     }
 
-    public void HideWord()
+    public void Hide()
     {
+        _isVisible = false;
         int i = 1;
         _newWord = "";
         do
