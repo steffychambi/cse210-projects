@@ -3,75 +3,42 @@ using System.Collections.Generic;
 using System.Text;
 public class Word
 {
-    private string _text;
-    private string _chosenWord;
+    //the text of the word
+    private string _wordText;
+    private bool _isVisible;
     private string _newWord;
-    private int _index;
-    private List<int> _listOfIndex;
-    private List<string> _words;
-    int _totalWords;
     
     // A  constructor
-    public Text (string text)
+    public Word(string wordText, bool isVisible)
     {
-        _text = text;
-
-    }
-    
-    public void ConvertToList()
-    {
-        _words = _text.Split(" ").ToList();
+        _wordText = wordText;
+        //initial visibility of the word
+        _isVisible = isVisible;
     }
 
-    public int GetTotalWords()
+    public void HideWord()
     {
-        _totalWords = _words.Count;
-        return _totalWords;
-    }
-
-    private void ChooseIndex()
-    {
-        Random randomNum = new Random();
-        _index = randomNum.Next(0,_totalWords);
-        bool isExist = _listOfIndex.find(_index.ToString());
-        if (isExist) {
-            Console.WriteLine("Element found in the list");
-        }
-        else {
-            Console.WriteLine("Element not found in the given list");
-        }
-        while (_index != )
-    }
-
-    private void ChooseIndex()
-    {
-        Random randomNum = new Random();
+        int i = 1;
+        _newWord = "";
         do
         {
-            _index = randomNum.Next(0,_totalWords);
-        _   chosenWord = _words[_index];
+            _newWord += "_";
+            i += 1;
         }
-        while (_index != )
-    }
-    
-    private void GetRenderedWord()
-    {
-        int number = _chosenWord.Length;
-        StringBuilder _underlines = new StringBuilder();
-        for (int i = 0; i < number; i++)
-        {
-            _underlines.Append("_");
-        }
-        _newWord = _underlines.ToString();
+        while (i <= _wordText.Length);
     }
 
-    public string GetNewText()
+    public string ReturnNewWord()
     {
-        ChooseWord();
-        GetRenderedWord();
-        _words[_index] = _newWord;
-        string newText = String.Join(" ", _words);
-        return newText;
+       
+        if (_isVisible == true)
+        {
+            return _wordText;
+        }
+        else
+        {
+            return _newWord;
+        }
     }
 
 }
