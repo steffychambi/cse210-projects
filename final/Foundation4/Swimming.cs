@@ -1,8 +1,8 @@
 public class Swimming : Activity
 {
-    private int _laps;
+    private double _laps;
     
-    public Swimming(string date, int length, int laps): base (date, length)
+    public Swimming(string date, int length, double laps): base (date, length)
     {
         _type = "Swimming";
         _laps = laps;
