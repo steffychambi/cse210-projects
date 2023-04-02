@@ -14,15 +14,19 @@ public abstract class Goal
         _points = points;
         _isComplete = false;
     }
+
     public abstract void RecordEvent();
+
     public virtual string GetStringRepresentation()
     {
         return $"{_type}:{_name},{_description},{_points}";
     }
+    
     public virtual void ShowGoal()
     {
         Console.WriteLine($"[{ShowCheckMark()}] {_name} ({_description})");
     }
+
     public virtual string ShowCheckMark()
     {
         if (_isComplete)
@@ -33,6 +37,11 @@ public abstract class Goal
         {
             return " ";
         }
+    }
+
+    public int GetPoints()
+    {
+        return _points;
     }
     
 }
