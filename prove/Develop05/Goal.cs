@@ -1,10 +1,10 @@
 public abstract class Goal
 {
     protected string _type;
-    private string _name;
-    private string _description;
-    private int _points;
-    private bool _isComplete;
+    protected string _name;
+    protected string _description;
+    protected int _points;
+    protected bool _isComplete;
 
     public Goal(string name, string description, int points)
     {
@@ -15,7 +15,24 @@ public abstract class Goal
         _isComplete = false;
     }
     public abstract void RecordEvent();
-    public abstract string GetStringRepresentation();
-    public abstract void ShowGoal();
+    public virtual string GetStringRepresentation()
+    {
+        return $"{_type}:{_name},{_description},{_points}";
+    }
+    public virtual void ShowGoal()
+    {
+        Console.WriteLine($"[{ShowCheckMark()}] {_name} ({_description})");
+    }
+    public virtual string ShowCheckMark()
+    {
+        if (_isComplete)
+        {
+            return "X";
+        }
+        else
+        {
+            return " ";
+        }
+    }
     
 }
