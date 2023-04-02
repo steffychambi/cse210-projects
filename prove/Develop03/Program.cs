@@ -25,22 +25,23 @@ class Program
         do
         {
             Console.Clear();
-            if (counter < scripture.GetTotalWords() + 1)
+            if (counter <= scripture.GetTotalWords())
             {
 
                 scripture.Display();
                 scripture.HideWord();
                 Console.WriteLine("");
-                Console.WriteLine("Please press 'enter' to continue or type 'quit' to finish");
-                userDecision = Console.ReadLine();
             }
             else
             {
                 break;
             }
+            Console.WriteLine("Please press 'enter' to continue or type 'quit' to finish");
+            userDecision = Console.ReadLine();
             counter += 1;
 
         }
         while (userDecision != "quit"); 
+        Console.Clear();
     }
 }
