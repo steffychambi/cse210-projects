@@ -6,6 +6,8 @@ public class Scripture
     private List<Word> _words = new List<Word>();
     private string _stringText;
     private List<string> _listText = new List<string>();
+    //Index of the words already hidden
+    //private List<int> _listIndex = new List<int>();
 
     public Scripture(Reference reference, string stringText)
     {
@@ -31,7 +33,7 @@ public class Scripture
     public void HideWord()
     {
         Random random = new Random();
-        bool x = true;
+        int num = 0;
         //Generating a random index
         int index = random.Next(0,_words.Count);
         do
@@ -39,14 +41,15 @@ public class Scripture
             if(_words[index].GetIsVisible() == true)
             {
                 _words[index].Hide();
-                x = false;
-            }  
+                break;
+            }
             else
             {
                 index = random.Next(0,_words.Count);
             }
+            num += 1;
         } 
-        while (x != false);
+        while (num <= _words.Count);
     }
 
     private string GetNewText()
