@@ -6,8 +6,6 @@ public class Scripture
     private List<Word> _words = new List<Word>();
     private string _stringText;
     private List<string> _listText = new List<string>();
-    //Index of the words already hidden
-    //private List<int> _listIndex = new List<int>();
 
     public Scripture(Reference reference, string stringText)
     {
@@ -29,7 +27,6 @@ public class Scripture
         }
     }
 
-    //num = number of words that are going to be hidden
     public void HideWord()
     {
         Random random = new Random();
