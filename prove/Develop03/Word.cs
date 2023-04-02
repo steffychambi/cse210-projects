@@ -15,7 +15,7 @@ public class Word
         _isVisible = true;
     }
 
-    public bool GetIsHidden()
+    public bool GetIsVisible()
     {
         return _isVisible;
     }

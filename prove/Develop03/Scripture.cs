@@ -28,15 +28,25 @@ public class Scripture
     }
 
     //num = number of words that are going to be hidden
-    public void HideWords(int num)
+    public void HideWord()
     {
         Random random = new Random();
-        for (int i = 1; i <= num; i++)
+        bool x = true;
+        //Generating a random index
+        int index = random.Next(0,_words.Count);
+        do
         {
-            //Generating a random index
-            int index = random.Next(0,_words.Count);
-            _words[index].Hide();
-        }
+            if(_words[index].GetIsVisible() == true)
+            {
+                _words[index].Hide();
+                x = false;
+            }  
+            else
+            {
+                index = random.Next(0,_words.Count);
+            }
+        } 
+        while (x != false);
     }
 
     private string GetNewText()
