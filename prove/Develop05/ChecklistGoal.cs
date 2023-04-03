@@ -33,4 +33,16 @@ public class ChecklistGoal : Goal
         Console.WriteLine($"[{ShowCheckMark()}] {_name} ({_description}) -- Currently completed: {_counter}/{_time}" );
     }
 
+    public override int GetPoints()
+    {
+        if (_isComplete)
+        {
+            return _bonus + (_counter * _points);
+        }
+        else
+        {
+            return _counter * _points;
+        }
+    }
+
 }

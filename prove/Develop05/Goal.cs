@@ -39,9 +39,6 @@ public abstract class Goal
         }
     }
 
-    public int GetPoints()
-    {
-        return _points;
-    }
+    public abstract int GetPoints();
     
 }

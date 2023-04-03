@@ -4,9 +4,22 @@ public class SimpleGoal : Goal
     {
         _type = "SimpleGoal";
     }
+
     public override void RecordEvent()
     {
         _isComplete = true;
+    }
+
+    public override int GetPoints()
+    {
+        if (_isComplete)
+        {
+            return _points;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
 
