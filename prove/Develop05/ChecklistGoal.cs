@@ -41,7 +41,7 @@ public class ChecklistGoal : Goal
         return $"{_type}:{_name},{_description},{_points},{_bonus},{_counter},{_time}";
     }
 
-    public override void ShowGoal()
+    public override void ShowGoalMenu2()
     {
         Console.WriteLine($"[{ShowCheckMark()}] {_name} ({_description}) -- Currently completed: {_counter}/{_time}" );
     }

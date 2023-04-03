@@ -36,7 +36,12 @@ public abstract class Goal
         return $"{_type}:{_name},{_description},{_points}";
     }
     
-    public virtual void ShowGoal()
+    public void ShowGoalName()
+    {
+        Console.WriteLine($"{_goalNumber}. {_name}.");
+    }
+
+    public virtual void ShowGoalMenu2()
     {
         Console.WriteLine($"{_goalNumber}. [{ShowCheckMark()}] {_name} ({_description})");
     }
