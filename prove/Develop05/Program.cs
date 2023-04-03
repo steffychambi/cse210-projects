@@ -35,7 +35,7 @@ class Program
         do
         {
             //Showing the total points gained to the user
-            goals.ShowTotalPoints();
+            Console.WriteLine($"You have {goals.GetTotalPoints()} points");
             Console.WriteLine();
 
             Console.WriteLine("Choose an option:");
@@ -123,6 +123,12 @@ class Program
             }
             else if (number == "5")  
             {
+                Console.WriteLine("Which goal did you accomplish?");
+                int num = Int32.Parse(Console.ReadLine());
+                goals.RecordEvent(num);
+                Console.WriteLine($"Now you have {goals.GetTotalPoints()} points");
+                Console.WriteLine($"Press enter to return to the menu.");
+                Console.ReadLine();
             }
             else 
             {
