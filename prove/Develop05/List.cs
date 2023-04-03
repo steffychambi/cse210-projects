@@ -32,7 +32,15 @@ public class GoalsList
     {
         foreach (Goal goal in _list)
         {
-            goal.ShowGoal();
+            goal.ShowGoalMenu2();
+        }
+    }
+
+    public void ShowGoalsName()
+    {
+        foreach (Goal goal in _list)
+        {
+            goal.ShowGoalName();
         }
     }
 
