@@ -1,4 +1,4 @@
-public class List
+public class GoalsList
 {
     private List<Goal> _list = new List<Goal>();
     private int _gainedPoints;

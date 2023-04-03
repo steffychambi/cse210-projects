@@ -4,6 +4,8 @@ class Program
     {
         Console.Clear();
 
+
+        //List for options in the menu.
         List<string> options = new List<string>()
         {
             "1. Create New Goal.",
@@ -13,6 +15,8 @@ class Program
             "5. Record Events.",
             "6. Quit."
         };
+
+        //List to show the types of goals
         List<string> goalsTypes = new List<string>()
         {
             "1. Simple Goal.",
@@ -22,6 +26,9 @@ class Program
 
         Console.WriteLine("Eternal Quest Program");
         Console.WriteLine();
+
+        //Initializing the List of Goals
+        GoalsList goals = new GoalsList();
 
         string number = "0";
 
@@ -61,10 +68,16 @@ class Program
                 if (selectedType == "1")  
                 {
                     SimpleGoal goal = new SimpleGoal(name, description, points);
+                    
+                    //Adding that goal to the goal list
+                    goals.AddGoals(goal);
                 }
                 else if (selectedType == "2")  
                 {
                     EternalGoal goal = new EternalGoal(name, description, points);
+                    
+                    //Adding that goal to the goal list
+                    goals.AddGoals(goal);
                 }
                 else if (selectedType == "3") 
                 {
@@ -75,6 +88,9 @@ class Program
                     int bonus = Int32.Parse(Console.ReadLine());
 
                     ChecklistGoal goal = new ChecklistGoal(name, description, points, time, bonus);
+                    
+                    //Adding that goal to the goal list
+                    goals.AddGoals(goal);
                 }
                 else 
                 {
@@ -84,6 +100,9 @@ class Program
             }
             else if (number == "2") 
             {
+                goals.ShowGoals();
+                Console.WriteLine("Press enter to return to the menu.");
+                Console.ReadLine();
             }
             else if (number == "3")  
             {
