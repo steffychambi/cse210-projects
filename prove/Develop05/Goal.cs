@@ -1,5 +1,6 @@
 public abstract class Goal
 {
+    private int _goalNumber;
     protected string _type;
     protected string _name;
     protected string _description;
@@ -15,7 +16,15 @@ public abstract class Goal
         _isComplete = false;
     }
 
-    public abstract void RecordEvent();
+    public void SetGoalNumber(int number)
+    {
+        _goalNumber = number;
+    }
+
+    public int GetGoalNumber()
+    {
+        return _goalNumber;
+    }
 
     public virtual string GetStringRepresentation()
     {
@@ -24,7 +33,7 @@ public abstract class Goal
     
     public virtual void ShowGoal()
     {
-        Console.WriteLine($"[{ShowCheckMark()}] {_name} ({_description})");
+        Console.WriteLine($"{_goalNumber}. [{ShowCheckMark()}] {_name} ({_description})");
     }
 
     public virtual string ShowCheckMark()
@@ -40,5 +49,7 @@ public abstract class Goal
     }
 
     public abstract int GetPoints();
+
+    public abstract void RecordEvent();
     
 }

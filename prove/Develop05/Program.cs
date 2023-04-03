@@ -34,6 +34,10 @@ class Program
 
         do
         {
+            //Showing the total points gained to the user
+            goals.ShowTotalPoints();
+            Console.WriteLine();
+
             Console.WriteLine("Choose an option:");
             Console.WriteLine();
 
@@ -71,6 +75,8 @@ class Program
                     
                     //Adding that goal to the goal list
                     goals.AddGoals(goal);
+                    //Assigning a number
+                    goal.SetGoalNumber(goals.GetNumberOfGoals());
                 }
                 else if (selectedType == "2")  
                 {
@@ -78,6 +84,8 @@ class Program
                     
                     //Adding that goal to the goal list
                     goals.AddGoals(goal);
+                    //Assigning a number
+                    goal.SetGoalNumber(goals.GetNumberOfGoals() + 1);
                 }
                 else if (selectedType == "3") 
                 {
@@ -91,6 +99,8 @@ class Program
                     
                     //Adding that goal to the goal list
                     goals.AddGoals(goal);
+                    //Assigning a number
+                    goal.SetGoalNumber(goals.GetNumberOfGoals() + 1);
                 }
                 else 
                 {
@@ -100,6 +110,7 @@ class Program
             }
             else if (number == "2") 
             {
+                Console.WriteLine("The goals are: ");
                 goals.ShowGoals();
                 Console.WriteLine("Press enter to return to the menu.");
                 Console.ReadLine();

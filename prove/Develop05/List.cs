@@ -1,11 +1,18 @@
 public class GoalsList
 {
     private List<Goal> _list = new List<Goal>();
+    private int _numGoals;
     private int _gainedPoints;
+
+    public int GetNumberOfGoals()
+    {
+        return _numGoals;
+    }
 
     public void AddGoals(Goal goal)
     {
         _list.Add(goal);
+        _numGoals += 1;
     }
 
     public void ShowGoals()
