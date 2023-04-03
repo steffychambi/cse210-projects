@@ -106,7 +106,8 @@ class Program
                 {
                     Console.WriteLine("That option does not exist.");
                 }
-
+                Console.WriteLine($"Press enter to return to the menu.");
+                Console.ReadLine();
             }
             else if (number == "2") 
             {
@@ -120,11 +121,18 @@ class Program
                 Console.Write("What is the name of the goal file? ");
                 string fileName = Console.ReadLine();
                 goals.SaveList(fileName);
+                Console.WriteLine("Goals saved successfully.");
                 Console.WriteLine("Press enter to return to the menu.");
                 Console.ReadLine();
             }
             else if (number == "4")  
             {
+                Console.Write("What is the name of the goal file? ");
+                string fileName = Console.ReadLine();
+                goals.LoadGoals(fileName);
+                Console.WriteLine("Goals loaded successfully.");
+                Console.Write("Press enter to return to the menu.");
+                Console.ReadLine();
             }
             else if (number == "5")  
             {
@@ -142,7 +150,7 @@ class Program
                     Console.WriteLine("That option does not exist.");
                 }
             }
-       // Console.Clear();
+        Console.Clear();
         }
         while (number != "6"); 
         Console.WriteLine("Goodbye!");

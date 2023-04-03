@@ -11,6 +11,11 @@ public class ChecklistGoal : Goal
         _counter = 0;    
     }
 
+    public void SetCounter(int counter)
+    {
+        _counter = counter;
+    }
+
     public override int GetPoints()
     {
         if (_isComplete == false)
@@ -39,7 +44,7 @@ public class ChecklistGoal : Goal
 
     public override string GetStringRepresentation()
     {
-        return $"{_type}:{_name},{_description},{_points},{_isComplete},{_bonus},{_counter},{_time}";
+        return $"{_type}:{_goalNumber},{_name},{_description},{_points},{_time},{_bonus},{_counter},{_isComplete}";
     }
 
     public override void ShowGoalMenu2()

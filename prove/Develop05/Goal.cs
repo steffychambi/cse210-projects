@@ -16,6 +16,18 @@ public abstract class Goal
         _isComplete = false;
     }
 
+    public void SetIsComplete(string isComplete)
+    {
+        if(isComplete == "True")
+        {
+            _isComplete = true;
+        }
+        else
+        {
+            _isComplete = false;
+        }
+    }
+
     public void SetGoalNumber(int number)
     {
         _goalNumber = number;

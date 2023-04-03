@@ -62,9 +62,52 @@ public class GoalsList
     {
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
+            outputFile.WriteLine($"{GetTotalPoints()}");
             foreach (Goal goal in _list)
             {
                 outputFile.WriteLine($"{goal.GetStringRepresentation()}");
+            }
+        }
+    }
+
+    public void LoadGoals(string filename)
+    {
+        string[] lines = System.IO.File.ReadAllLines(filename);
+
+        _gainedPoints += Int32.Parse(lines[0]);
+
+        //Removing the first line.
+        int indexToRemove = 0;
+        lines = lines.Where((source, index) =>index != indexToRemove).ToArray();
+
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(":");
+
+            string type = parts[0];
+            string[] variables = parts[1].Split(",");
+
+            if(type == "SimpleGoal")
+            {
+                SimpleGoal goal = new SimpleGoal(variables[1],variables[2],Int32.Parse(variables[3]));
+                goal.SetGoalNumber(Int32.Parse(variables[0]));
+                goal.SetIsComplete(variables[4]);
+                AddGoals(goal);
+            }
+            else if(type == "EternalGoal")
+            {
+                EternalGoal goal = new EternalGoal(variables[1],variables[2],Int32.Parse(variables[3]));
+                goal.SetGoalNumber(Int32.Parse(variables[0]));
+                goal.SetIsComplete(variables[4]);
+                AddGoals(goal);
+            }
+            else if(type == "ChecklistGoal")
+            {
+                ChecklistGoal goal = new ChecklistGoal(variables[1],variables[2],Int32.Parse(variables[3]),Int32.Parse(variables[4]),Int32.Parse(variables[5]));
+                goal.SetGoalNumber(Int32.Parse(variables[0]));
+                goal.SetCounter(Int32.Parse(variables[6]));
+                goal.SetIsComplete(variables[7]);
+                AddGoals(goal);
             }
         }
     }
