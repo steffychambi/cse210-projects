@@ -132,7 +132,6 @@ class Program
                 Console.WriteLine("Which goal did you accomplish?");
                 int num = Int32.Parse(Console.ReadLine());
                 goals.RecordEvent(num);
-                Console.WriteLine($"Now you have {goals.GetTotalPoints()} points");
                 Console.WriteLine($"Press enter to return to the menu.");
                 Console.ReadLine();
             }

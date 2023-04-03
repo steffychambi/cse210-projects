@@ -58,6 +58,11 @@ public abstract class Goal
         }
     }
 
+    public bool GetIsComplete()
+    {
+        return _isComplete;
+    }
+
     public abstract void RecordEvent();
     
 }

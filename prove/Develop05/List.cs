@@ -16,9 +16,17 @@ public class GoalsList
         {
             if(num == goal.GetGoalNumber())
             {
-                goal.RecordEvent();
-                Console.WriteLine($"Congratulations!! You have earned {goal.GetPoints()} points!");
-                _gainedPoints += goal.GetPoints();
+                if(goal.GetIsComplete())
+                {
+                    Console.WriteLine($"You can`t record this event because is almost complete.");
+                }
+                else
+                {
+                    goal.RecordEvent();
+                    Console.WriteLine($"Congratulations!! You have earned {goal.GetPoints()} points!");
+                    _gainedPoints += goal.GetPoints();
+                    Console.WriteLine($"Now you have {GetTotalPoints()} points");
+                }
             }
         }
     }
