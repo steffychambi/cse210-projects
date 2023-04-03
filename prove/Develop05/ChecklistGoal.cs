@@ -10,6 +10,19 @@ public class ChecklistGoal : Goal
         _bonus = bonus;
         _counter = 0;    
     }
+
+    public override int GetPoints()
+    {
+        if (_isComplete)
+        {
+            return _bonus + _points;
+        }
+        else
+        {
+            return _points;
+        }
+    }
+
     public override void RecordEvent()
     {
         if(_counter == _time)
@@ -31,18 +44,6 @@ public class ChecklistGoal : Goal
     public override void ShowGoal()
     {
         Console.WriteLine($"[{ShowCheckMark()}] {_name} ({_description}) -- Currently completed: {_counter}/{_time}" );
-    }
-
-    public override int GetPoints()
-    {
-        if (_isComplete)
-        {
-            return _bonus + (_counter * _points);
-        }
-        else
-        {
-            return _counter * _points;
-        }
     }
 
 }

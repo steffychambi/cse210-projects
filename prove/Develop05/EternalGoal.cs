@@ -19,9 +19,4 @@ public class EternalGoal : Goal
         return " ";
     }
 
-    public override int GetPoints()
-    {
-        return _points * _counter;
-    }
-
 }

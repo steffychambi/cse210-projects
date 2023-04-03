@@ -26,6 +26,11 @@ public abstract class Goal
         return _goalNumber;
     }
 
+    public virtual int GetPoints()
+    {
+        return _points;
+    }
+
     public virtual string GetStringRepresentation()
     {
         return $"{_type}:{_name},{_description},{_points}";
@@ -47,8 +52,6 @@ public abstract class Goal
             return " ";
         }
     }
-
-    public abstract int GetPoints();
 
     public abstract void RecordEvent();
     
