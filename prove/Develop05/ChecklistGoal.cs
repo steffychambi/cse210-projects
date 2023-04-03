@@ -13,37 +13,38 @@ public class ChecklistGoal : Goal
 
     public override int GetPoints()
     {
-        if (_isComplete)
+        if (_isComplete == false)
         {
-            return _bonus + _points;
+            return _points;
         }
         else
         {
-            return _points;
+            return _points + _bonus;
         }
     }
 
     public override void RecordEvent()
     {
-        if(_counter == _time)
+        if (_counter == _time - 1)
         {
             _isComplete = true;
-        }
-        else
-        {
             _counter += 1;
+        }
+        else if (_counter < _time)
+        {
             _isComplete = false;
+            _counter += 1;
         }
     }
 
     public override string GetStringRepresentation()
     {
-        return $"{_type}:{_name},{_description},{_points},{_bonus},{_counter},{_time}";
+        return $"{_type}:{_name},{_description},{_points},{_isComplete},{_bonus},{_counter},{_time}";
     }
 
     public override void ShowGoalMenu2()
     {
-        Console.WriteLine($"[{ShowCheckMark()}] {_name} ({_description}) -- Currently completed: {_counter}/{_time}" );
+        Console.WriteLine($"{_goalNumber}. [{ShowCheckMark()}] {_name} ({_description}) -- Currently completed: {_counter}/{_time}" );
     }
 
 }

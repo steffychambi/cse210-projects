@@ -1,6 +1,6 @@
 public abstract class Goal
 {
-    private int _goalNumber;
+    protected int _goalNumber;
     protected string _type;
     protected string _name;
     protected string _description;
@@ -33,7 +33,7 @@ public abstract class Goal
 
     public virtual string GetStringRepresentation()
     {
-        return $"{_type}:{_name},{_description},{_points}";
+        return $"{_type}:{_goalNumber},{_name},{_description},{_points},{_isComplete}";
     }
     
     public void ShowGoalName()

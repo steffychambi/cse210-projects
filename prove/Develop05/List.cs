@@ -1,3 +1,4 @@
+using System.IO;
 public class GoalsList
 {
     private List<Goal> _list = new List<Goal>();
@@ -47,5 +48,16 @@ public class GoalsList
     public int GetTotalPoints()
     {
         return _gainedPoints;
+    }
+
+    public void SaveList(string filename)
+    {
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach (Goal goal in _list)
+            {
+                outputFile.WriteLine($"{goal.GetStringRepresentation()}");
+            }
+        }
     }
 }

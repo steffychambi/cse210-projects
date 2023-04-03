@@ -9,5 +9,17 @@ public class SimpleGoal : Goal
     {
         _isComplete = true;
     }
-    
+
+    public override int GetPoints()
+    {
+        if (_isComplete)
+        {
+            return _points;
+        }
+        else 
+        {
+            return 0;
+        }
+    }
+
 }

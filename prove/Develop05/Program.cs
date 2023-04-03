@@ -85,7 +85,7 @@ class Program
                     //Adding that goal to the goal list
                     goals.AddGoals(goal);
                     //Assigning a number
-                    goal.SetGoalNumber(goals.GetNumberOfGoals() + 1);
+                    goal.SetGoalNumber(goals.GetNumberOfGoals());
                 }
                 else if (selectedType == "3") 
                 {
@@ -100,7 +100,7 @@ class Program
                     //Adding that goal to the goal list
                     goals.AddGoals(goal);
                     //Assigning a number
-                    goal.SetGoalNumber(goals.GetNumberOfGoals() + 1);
+                    goal.SetGoalNumber(goals.GetNumberOfGoals());
                 }
                 else 
                 {
@@ -112,17 +112,23 @@ class Program
             {
                 Console.WriteLine("The goals are: ");
                 goals.ShowGoals();
-                Console.WriteLine("Press enter to return to the menu.");
+                Console.Write("Press enter to return to the menu.");
                 Console.ReadLine();
             }
             else if (number == "3")  
             {
+                Console.Write("What is the name of the goal file? ");
+                string fileName = Console.ReadLine();
+                goals.SaveList(fileName);
+                Console.WriteLine("Press enter to return to the menu.");
+                Console.ReadLine();
             }
             else if (number == "4")  
             {
             }
             else if (number == "5")  
             {
+                goals.ShowGoalsName();
                 Console.WriteLine("Which goal did you accomplish?");
                 int num = Int32.Parse(Console.ReadLine());
                 goals.RecordEvent(num);
