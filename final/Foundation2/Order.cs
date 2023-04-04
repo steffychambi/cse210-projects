@@ -9,7 +9,7 @@ public class Order
     {
     }
 
-    public void SetCostumer(Customer costumer)
+    public void SetCustomer(Customer costumer)
     {
         _customer = costumer;
     }
@@ -57,7 +57,7 @@ public class Order
 
     public string ReturnShippingLabel()
     {
-        string shippingLabel = $"costumer name: {_customer.GetName()}\n";
+        string shippingLabel = $"customer name: {_customer.GetName()}\n";
         shippingLabel += "street // city // state // country\n";
         shippingLabel += $"{_customer.GetAddress()}.\n";
         return shippingLabel;

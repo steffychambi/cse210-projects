@@ -12,7 +12,7 @@ class Program
         Customer customer1 = new Customer("Polly Jones", address1);
 
         //Setting the variable costumer of the first order
-        order1.SetCostumer(customer1);
+        order1.SetCustomer(customer1);
 
         //Creating products for the first order:
         //Product 1:
@@ -35,7 +35,7 @@ class Program
         Customer customer2 = new Customer("Maria Toledo", address2);
 
         //Setting the variable costumer of the first order
-        order2.SetCostumer(customer2);
+        order2.SetCustomer(customer2);
         
         //Creating products for the second order:
         //Product 4:
