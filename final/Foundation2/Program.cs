@@ -9,10 +9,10 @@ class Program
 
         //Creating a costumer and its address
         Address address1 = new Address("Main Street", "Orlando", "Florida", "United States");
-        Costumer costumer1 = new Costumer("Polly Jones", address1);
+        Customer customer1 = new Customer("Polly Jones", address1);
 
         //Setting the variable costumer of the first order
-        order1.SetCostumer(costumer1);
+        order1.SetCostumer(customer1);
 
         //Creating products for the first order:
         //Product 1:
@@ -32,10 +32,10 @@ class Program
 
         //Creating a costumer and its address
         Address address2 = new Address("Ave. Banzer", "Santa Cruz de la Sierra", "Santa Cruz", "Bolivia");
-        Costumer costumer2 = new Costumer("Maria Toledo", address2);
+        Customer customer2 = new Customer("Maria Toledo", address2);
 
         //Setting the variable costumer of the first order
-        order2.SetCostumer(costumer2);
+        order2.SetCostumer(customer2);
         
         //Creating products for the second order:
         //Product 4:

@@ -1,7 +1,7 @@
 public class Order
 {
     private List<Product> _products = new List<Product>();
-    private Costumer _costumer;
+    private Customer _customer;
     private double _shippingCost;
     private double _totalCost;
 
@@ -9,9 +9,9 @@ public class Order
     {
     }
 
-    public void SetCostumer(Costumer costumer)
+    public void SetCostumer(Customer costumer)
     {
-        _costumer = costumer;
+        _customer = costumer;
     }
 
     public string GetTotalCost()
@@ -26,11 +26,11 @@ public class Order
 
     public void CalculateShippingCost()
     {
-        if(_costumer.LiveInUsa() == true)
+        if(_customer.LiveInUsa() == true)
         {
            _shippingCost = 5.00;
         }
-        else if(_costumer.LiveInUsa() == false)
+        else if(_customer.LiveInUsa() == false)
         {
             _shippingCost = 35.00;
         }
@@ -57,9 +57,9 @@ public class Order
 
     public string ReturnShippingLabel()
     {
-        string shippingLabel = $"costumer name: {_costumer.GetName()}\n";
+        string shippingLabel = $"costumer name: {_customer.GetName()}\n";
         shippingLabel += "street // city // state // country\n";
-        shippingLabel += $"{_costumer.GetAddress()}.\n";
+        shippingLabel += $"{_customer.GetAddress()}.\n";
         return shippingLabel;
     }
 }
