@@ -4,10 +4,42 @@ public class GoalsList
     private List<Goal> _list = new List<Goal>();
     private int _numGoals;
     private int _gainedPoints;
-
+    private int _level = 1;
+    private bool _passLevel = false;
     public int GetNumberOfGoals()
     {
         return _numGoals;
+    }
+
+    public int GetLevel()
+    {
+        return _level;
+    }
+
+    public bool IsPass()
+    {
+        return _passLevel;
+    }
+
+    public void SetLevel()
+    {
+        if (_gainedPoints != 0)
+        {
+            if(_gainedPoints % (100) == 0)
+            {
+                _level += 1;
+                _passLevel = true;
+            }
+            else
+            {
+                _passLevel = false;
+            }
+        }
+    }
+
+    public void SetGainedPoints()
+    {
+        _gainedPoints += 20;
     }
 
     public void RecordEvent(int num)
