@@ -1,5 +1,6 @@
 class Program
-{
+{   
+    //The program exceeds the core requirements because each time the user gain 100 points, pass to another level and receive 20 points more.
     static void Main(string[] args)
     {
         Console.Clear();
